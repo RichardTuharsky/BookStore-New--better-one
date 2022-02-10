@@ -35,7 +35,7 @@ class Library:
         DateOverDue = StringVar()
         DaysOnLoan = StringVar()
 
-        MainFrame = Frame(self.root, bg='cadetblue')
+        MainFrame = Frame(self.root, bg='lightsteelblue')
         MainFrame.grid()
         TitleFrame = Frame(MainFrame, bd=10, width=1350, padx=60, relief=RIDGE)
         TitleFrame.pack(side=TOP)
@@ -49,7 +49,7 @@ class Library:
                           height=400, relief=RIDGE)
         DataFrame.pack(side=BOTTOM)
         DataFrameLEFTCover = LabelFrame(
-            DataFrame, bd=10, width=800, height=300, padx=13, pady=2, relief=RIDGE, bg='cadetblue', font=('arial', 12, 'bold'), text="Informacie o uzivateloch")
+            DataFrame, bd=10, width=800, height=300, padx=13, pady=2, relief=RIDGE, bg='lightsteelblue', font=('arial', 12, 'bold'), text="Informacie o uzivateloch")
         DataFrameLEFTCover.pack(side=LEFT, padx=10)
         DataFrameLEFT = Frame(DataFrameLEFTCover, bd=10,
                               width=800, height=300, padx=13, pady=2, relief=RIDGE)
@@ -58,8 +58,24 @@ class Library:
                                     padx=10, relief=RIDGE, font=('arial', 12, 'bold'), text="Informacie o uzivateloch")
         DataFrameLEFTb.pack(side=TOP)
         DataFrameRIGHT = LabelFrame(DataFrame, bd=10, width=450, height=300, padx=10,
-                                    relief=RIDGE, bg='cadetblue', font=('arial', 12, 'bold'), text="Detaily o knihach")
+                                    relief=RIDGE, bg='lightsteelblue', font=('arial', 12, 'bold'), text="Detaily o knihach")
         DataFrameRIGHT.pack(side=RIGHT)
+
+        self.btnData = Button(ButtonFrame, text="Data", font=(
+            'arial', 19, 'bold'), padx=4, width=16, bd=4, bg="lightsteelblue")
+        self.btnData.grid(row=0, column=0, padx=3)
+        self.btnDelete = Button(ButtonFrame, text="Vymaz", font=(
+            'arial', 19, 'bold'), padx=4, width=16, bd=4, bg="lightsteelblue")
+        self.btnDelete.grid(row=0, column=1, padx=3)
+        self.btnSearch = Button(ButtonFrame, text="Hladaj", font=(
+            'arial', 19, 'bold'), padx=4, width=16, bd=4, bg="lightsteelblue")
+        self.btnSearch.grid(row=0, column=2, padx=3)
+        self.btnReset = Button(ButtonFrame, text="Reset", font=(
+            'arial', 19, 'bold'), padx=4, width=16, bd=4, bg="lightsteelblue")
+        self.btnReset.grid(row=0, column=3, padx=3)
+        self.btnExit = Button(ButtonFrame, text="Exit", font=(
+            'arial', 19, 'bold'), padx=4, width=16, bd=4, bg="lightsteelblue")
+        self.btnExit.grid(row=0, column=4, padx=3)
 
 
 if __name__ == '__main__':
